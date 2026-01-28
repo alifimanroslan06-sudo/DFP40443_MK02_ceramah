@@ -14,8 +14,23 @@
             background: white;
             padding: 30px;
         }
-        h1 {
+        h1, h2 {
             color: #2c3e50;
+        }
+        .info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .info img {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        .info-text p {
+            margin: 6px 0;
         }
         input, select {
             width: 100%;
@@ -39,14 +54,26 @@
 <body>
 
 <div class="container">
+
     <h1>Ceramah Profesional Dunia Digital</h1>
 
-    <p><strong>Penceramah:</strong> Dr. Ahmad Zaki</p>
-    <p><strong>Tarikh:</strong> 15 Mei 2026</p>
-    <p><strong>Yuran:</strong> RM2500.00 / slot</p>
+    <!-- INFO CERAMAH -->
+    <div class="info">
+        <img src="penceramah.jpeg" alt="Ustaz Mohd Hanafi Bin Jusoh">
+
+        <div class="info-text">
+            <p><strong>Penceramah:</strong> Ustaz Mohd Hanafi Bin Jusoh </p>
+            <p><strong>Kepakaran:</strong> Transformasi Digital & Keselamatan Siber</p>
+            <p><strong>Tarikh:</strong> 15 Mei 2026</p>
+            <p><strong>Masa:</strong> 9.00 pagi – 4.00 petang</p>
+            <p><strong>Lokasi:</strong> Dewan Konvensyen Digital, Kuala Lumpur</p>
+            <p><strong>Yuran:</strong> RM2500.00 / slot</p>
+        </div>
+    </div>
 
     <hr>
 
+    <!-- BORANG -->
     <h2>Borang Pendaftaran</h2>
 
     <form action="pengesahan.php" method="POST" enctype="multipart/form-data">
@@ -64,7 +91,7 @@
         </select>
 
         <input type="number" name="slot" placeholder="Bilangan Slot" required>
-        <input type="file" name="resit" required>
+        
 
         <label>
             <input type="checkbox" required>
@@ -75,6 +102,7 @@
         <button type="submit">Hantar</button>
 
     </form>
+
 </div>
 
 </body>
